@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    position: relative;
+}
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    margin: 0rem 12rem;
+    padding-top: 15rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0rem 12rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+
+}
+
+li {
+    font-size: 2rem;
+    list-style: none;
+    margin: 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* nav-bar start */
+.nav {
+    transition: 1s ease-in-out;
+    position: fixed;
+    right:-600px;
+}
+
+.nav-toggle {
+    transition: 1s ease-in-out;
+    right: 0px;
+}
+
+.nav-manu {
+    background-color: #fff;
+    width: 600px;
+    height: 100vh;
+    padding: 10rem;
+}
+
+/* nav-bar end */
+/* hamburger strat */
+.hamburger {
+    position: fixed;
+    top: 2rem;
+    right: 4rem;
+    cursor: pointer;
+    z-index: 999;
+    transition: .5s ease-in-out;
+}
+
+.span {
+    width: 2rem;
+    height: 3px;
+    margin: 6px;
+    background-color: black;
+}
+
+/* hamburger ends */
+
+.section-1 {
+    background-color: #f3f3f3;
+}
+
+.section-2 {
+    background-color: #c54cfd;
+    color: #fff;
+}
+
+.section-2:focus {
+    background-color: #fff;
+    color: #c54cfd;
+}
+
+/* cursor code */
+.wrapper {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(50%, 50%);
+    transition: .2s ease-out;
+}
+.cursor {
+    width: 1rem;
+    height: 1rem;
+    background-color: cadetblue;
+    border-radius: 50%;
+}
+
+/* cursor ends */
