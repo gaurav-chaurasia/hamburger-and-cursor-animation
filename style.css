@@ -8,6 +8,10 @@ body {
     font-family: 'Lato', sans-serif;
     position: relative;
 }
+::selection {
+    color: #fff;
+    background: #000;
+}
 section {
     width: 100%;
     height: 100vh;
@@ -30,12 +34,8 @@ p {
 }
 
 li {
-    font-size: 2rem;
     list-style: none;
-    margin: 2rem;
     cursor: pointer;
-    text-transform: uppercase;
-    text-align: center;
 }
 
 a {
@@ -45,27 +45,51 @@ a {
 
 /* nav-bar start */
 .nav {
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in;
     position: fixed;
     right:-600px;
+    background-color: #fff;
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .nav-toggle {
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-out;
     right: 0px;
 }
 
 .nav-manu {
-    background-color: #fff;
-    width: 600px;
-    height: 100vh;
-    padding: 10rem;
+    margin: 8rem 0;
+    display: flex;
+    flex-direction: column;  
+    font-size: 2rem;
+}
+.nav-manu ul li{
+    padding-top: 2.8rem;
+}
+.social {
+    margin: 9.6rem 0;
+    display: flex;
+    flex-direction: column;  
+    font-size: 1rem;
+}
+.social ul li{
+    padding-top: 2rem;
+    color: #6b6b6b;
+}
+ .nav li a:hover {
+    padding-bottom: 0;
+    border-bottom: 2px solid #000;
 }
 
 /* nav-bar end */
 /* hamburger strat */
 .hamburger {
     position: fixed;
+    width: 2rem;
+    height: 24px;
     top: 2rem;
     right: 4rem;
     cursor: pointer;
@@ -74,12 +98,36 @@ a {
 }
 
 .span {
+    position: absolute;
     width: 2rem;
     height: 3px;
-    margin: 6px;
-    background-color: black;
+    background-color: #000;
+    transition: 0.5s ease-out;
+}
+.hamburger div:nth-child(1) {
+    top: 0px;
+}
+.hamburger div:nth-child(2) {
+    top: 10px;
+}
+.hamburger div:nth-child(3) {
+    bottom: 0px;
+}
+.slide {
+    opacity: 0;
+    transition: 0.5s ease-out;
 }
 
+.cross-down {
+    width: 2rem;
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+.cross-up {
+    width: 2rem;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+}
 /* hamburger ends */
 
 .section-1 {
